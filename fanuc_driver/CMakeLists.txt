@@ -10,6 +10,7 @@ find_package(catkin REQUIRED COMPONENTS industrial_robot_client)
 
 catkin_package(
   CATKIN_DEPENDS industrial_robot_client
+  INCLUDE_DIRS include
 )
 
 include_directories(
@@ -119,3 +120,6 @@ install(DIRECTORY karel launch tpe
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 
 install(FILES readme.md DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+
+install(DIRECTORY include/${PROJECT_NAME}/
+  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})
